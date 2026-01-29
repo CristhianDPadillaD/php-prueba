@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Task App</title>
+</head>
+
+<body>
+
+    <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="#" class = "navbar-brand">Task App</a>
+
+        <ul class="navbar-nav ms-auto"> 
+            <form class="d-flex" role="search">
+                <input type="search" id="search" class="form-control me-2" placeholder="Search your task">
+                <button class="btn btn-success my-2 my-sm-0" typne="submit">Search</button>
+            </form>
+        </ul>
+
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form id = "task-form">
+                            <input type="hidden" id="taskId">
+                            <div class="mb-3">
+                                <input type="text" id="name" placeholder="Task Name" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Task Description"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 text-center"> Save task</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-7">
+                <div class="card my-4" id="task-result">
+                    <div class="card-body">
+                        <h2 class="mb-3">Tasks</h2>
+                        <ul id="container"></ul>
+                    </div>
+                </div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>Id</td>
+                                    <td>Name</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody id="task">
+                                
+                            </tbody>
+                        </table>
+                </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
